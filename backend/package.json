@@ -1,0 +1,28 @@
+{
+    "name": "ethara-ai-backend-japman",
+    "version": "1.0.0",
+    "description": "Ethara ai backend API - Made by Japman",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.1",
+        "mongodb": "^7.0.0",
+        "mongoose": "^8.21.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "@types/express": "^4.17.25",
+        "@types/node": "^20.19.30",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.9.3"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
