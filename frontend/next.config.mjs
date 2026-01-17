@@ -7,10 +7,12 @@ const nextConfig = {
     unoptimized: true,
   },
   async rewrites() {
+    // Remove trailing slash from API URL to prevent double slashes
+    const apiUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000').replace(/\/$/, '')
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/:path*`,
+        destination: `${apiUrl}/api/:path*`,
       },
     ]
   },
